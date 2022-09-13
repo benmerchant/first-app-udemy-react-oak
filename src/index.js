@@ -1,28 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SingleComment from './SingleComment';
+import UserCard from './UserCard';
+import tatiana from './images/tatiana.jpg';
+import emily from './images/emily.jpg';
+import krysten from './images/krysten.jpg';
 
-const App = function () {
-  const buttonText = 'Click me NOW!';
-  function getButtonText() {
-    return buttonText;
-  }
-
-  const buttonTextStr = 'Heyooooo World!';
-  const buttonTextInt = 123;
-  const buttonTextArr = ['Heyooooo', 'Yall'];
-
-  const buttonTextObj = { text: 'RESISTANCE IS FULTILE' };
-
-  const style = { backgroundColor: 'red', color: 'white' };
-
+const App = () =>{
   return (
-    <div>
-      <label htmlFor='name' className='label'>
-        Enter Email
-      </label>
-      <input id='name' />
-      {/* Style prop value must be an object (eslintreact/style-prop-object) */}
-      <button style={style}>{buttonTextObj.text}</button>
+    <div className='ui comments'>
+      <UserCard>
+        <SingleComment
+          name='emily'
+          text='go sox'
+          date='Today at 00:00' 
+          pfp={emily}
+        />
+      </UserCard>
+      <UserCard>
+        <SingleComment
+          name='tatiana'
+          text='dont make me angry'
+          date='Thursday at 03:00' 
+          pfp={tatiana}
+        />
+      </UserCard>
+      <UserCard>
+        <SingleComment
+          name='krysten'
+          text='secure the bag'
+          date='Wednesday at 21:00' 
+          pfp={krysten}
+        /> 
+      </UserCard>
+      
     </div>
   );
 };

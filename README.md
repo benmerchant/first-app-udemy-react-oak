@@ -9,3 +9,5 @@ Lesson 12: Glad I'm not skipping remedial sections. This is actually interesting
 Lesson 12: the HTML attributes _for_ and _class_ need to be _htmlFor_ and _className_ respectively
 
 Lesson 13: 'youll see this error eventually' Uncaught Error: Objects are not valid as a React child (found: object with keys {text}). If you meant to render a collection of children, use an array instead.
+
+BLOG POSTS starts with branch _section-03_
