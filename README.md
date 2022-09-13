@@ -23,3 +23,27 @@ Lesson 30: Rules of a class based component
 1. must be a JS class
 1. must extend React.Component
 1. must define a _render_ method
+
+Lesson 31: State Rules
+
+1. state only usable w/ class components
+1. state is a JS obj that contains data relevant to a component
+1. updating state on a component causes the component to rerender
+1. state must be initialized when a component is created
+1. **state can only be update using the function _setState_**
+
+Lesson 33: Lifecycle Methods Overview
+
+1. JS file loaded up browser
+1. App component gets created
+1. Constructor function gets called
+1. _this.state_ property assigned the state object
+1. we call geolocation service
+1. react calls the components render method
+1. App returns JSX, gets rendered to page as HTML
+   after some period of time
+1. we get results of geolocation request
+1. we update our state obj w/ _this.setState_
+1. React calls _render_ method a second time
+1. _render_ method returns some JSX
+1. React takes that JSX and updates the content on the screen

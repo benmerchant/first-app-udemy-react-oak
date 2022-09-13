@@ -1,20 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 class App extends React.Component {
-  render() {
+  constructor(props) {
+    super(props)
+    this.state = {latitude: null}
     window.navigator.geolocation.getCurrentPosition(
       (position) => {
-        console.log(position);
+        this.setState({latitude: position.coords.latitude})
       },
       (error) => {
-        console.log(error);
+        this.setState({errorMessage: error.message})
       }
     );
-    return(
-      <div>
-        You are in the Northern Hemisphere
-      </div>
-    )
+  }
+  render() {
+    if(this.state.errorMessage && !this.state.latitude) {
+      return <div>{this.state.errorMessage}</div>
+    }
+    if(!this.state.errorMessage && this.state.latitude) {
+      return <div>{this.state.latitude}</div>
+    }
+    else {
+      return <div>Loading...</div>
+    }
   }
 }
 
