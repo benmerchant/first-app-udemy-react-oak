@@ -47,3 +47,20 @@ Lesson 33: Lifecycle Methods Overview
 1. React calls _render_ method a second time
 1. _render_ method returns some JSX
 1. React takes that JSX and updates the content on the screen
+
+Lesson 35: Lifecycle Methods
+
+1. constructor: good place for one time setup
+1. render: just return JSX
+1. _componentDidMount_: good place to load data
+1. _componentDidUpdate_: good place to load more data when state/props change
+1. _componentWillUnmount_: good place to do cleanup
+
+Lesson 37:
+
+Don't need constructor function to initialize state
+
+Lesson 38:
+
+We don't have to pass entire _props_ object. Destructure it for simpler code
+\*note: fails if you have a latitude of 0... Test Cases, man...
