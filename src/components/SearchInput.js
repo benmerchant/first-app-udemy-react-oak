@@ -1,10 +1,6 @@
 import React from 'react';
 
 class SearchInput extends React.Component {
-  // constructor() {
-  //   super();
-  //   this.onFormSubmit = this.onFormSubmit.bind(this);
-  // }
   state = { entry: '' };
 
   onFormSubmit = (e) => {
