@@ -64,3 +64,22 @@ Lesson 38:
 
 We don't have to pass entire _props_ object. Destructure it for simpler code
 \*note: fails if you have a latitude of 0... Test Cases, man...
+
+Lesson 49:
+
+Uncontrolled vs Controlled Input
+
+dont store info in HTML elements, centralize in React state
+good way to... ie... force UPPERCASE text
+
+Lesson 50:
+
+**most common React error message** Uncaught TypeError: Cannot read properties of undefined (reading 'state')
+
+this - solution options
+
+_this.onFormSubmit = this.onFormSubmit.bind(this);_ in the constructor
+
+or
+
+write event handler as an arrow function
