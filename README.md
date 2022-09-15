@@ -2,6 +2,8 @@
 
 [Link to the course](https://www.udemy.com/course/typescript-react-js-course-with-react-typescript-project)
 
+**i know, i know... don't save API keys in version control**
+
 I'm just going to use the same repo for the entire course so I can use the GitHub issues
 
 **Out of date**: Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. [Learn more](https://reactjs.org/link/switch-to-createroot)
