@@ -4,6 +4,17 @@
 
 **i know, i know... don't save API keys in version control**
 
+**HUGE OUT OF DATE**
+
+1. Matched leaf route at location "/" does not have an element. This means it will render an <Outlet /> with a null value by default resulting in an "empty" page.
+1. 1. [fix: ](https://stackoverflow.com/questions/69854011/matched-leaf-route-at-location-does-not-have-an-element)
+1. react_devtools_backend.js:4026 Warning: Functions are not valid as a React child. This may happen if you return a Component instead of <Component /> from render. Or maybe you meant to call this function rather than return it.
+1. 1. fix... same link as above
+1. the tutorial was getting undesired behavior, that needed a work around. the behavior was showing the HOME component regardless of which route was selected because it included a slash.
+1. 1. the fix was to add _exact_ before _path_ in the Route
+1. passing props to the _element_ since we aren't using _component_ as an JSX attr...
+1. You don't need to use an exact prop on <Route path="/"> anymore. This is because all <Route> paths match exactly by default. [from](https://reacttraining.com/blog/react-router-v6-pre/)
+
 I'm just going to use the same repo for the entire course so I can use the GitHub issues
 
 **Out of date**: Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. [Learn more](https://reactjs.org/link/switch-to-createroot)
