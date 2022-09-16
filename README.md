@@ -18,6 +18,8 @@
 **HUGER OUT OF DATE**
 _history.push_ using props... huge breaking change in react-router-dom v6
 
+## didn't need the SWITCH tag, it just worked
+
 ```js
 const navigate = useNavigate();
 setTimeout(() => {
