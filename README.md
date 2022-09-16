@@ -18,14 +18,14 @@
 **HUGER OUT OF DATE**
 _history.push_ using props... huge breaking change in react-router-dom v6
 
-## didn't need the SWITCH tag, it just worked
-
 ```js
 const navigate = useNavigate();
 setTimeout(() => {
   navigate('/contact');
 }, 1500);
 ```
+
+## didn't need the SWITCH tag, it just worked
 
 I'm just going to use the same repo for the entire course so I can use the GitHub issues
 
@@ -108,3 +108,7 @@ _this.onFormSubmit = this.onFormSubmit.bind(this);_ in the constructor
 or
 
 write event handler as an arrow function
+
+Lesson 67:
+
+render a modal, via PORTALS as a child of another element (besides #root)
