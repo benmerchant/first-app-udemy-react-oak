@@ -15,6 +15,16 @@
 1. passing props to the _element_ since we aren't using _component_ as an JSX attr...
 1. You don't need to use an exact prop on <Route path="/"> anymore. This is because all <Route> paths match exactly by default. [from](https://reacttraining.com/blog/react-router-v6-pre/)
 
+**HUGER OUT OF DATE**
+_history.push_ using props... huge breaking change in react-router-dom v6
+
+```js
+const navigate = useNavigate();
+setTimeout(() => {
+  navigate('/contact');
+}, 1500);
+```
+
 I'm just going to use the same repo for the entire course so I can use the GitHub issues
 
 **Out of date**: Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. [Learn more](https://reactjs.org/link/switch-to-createroot)
