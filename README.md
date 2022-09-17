@@ -158,3 +158,21 @@ React dev tools:
   "children": ["<Navbar />", "<TodoList />"]
 }
 ```
+
+Lesson 76:
+
+## [Further reading on context](https://reactjs.org/docs/context.html#contextconsumer)
+
+consumer works in both functional and class-based components
+consumer also allows consuming mulitple contexts per component
+
+Lesson 77: it bears repeating. i really like how clean this Context API is... smooth and simple, yet powerful in its functionality
+
+Lesson 80: HOOKS
+
+1. special React functions that allow us to perform some operations in the functional component that were previously only possible in class-based
+1. 1. using state
+1. 1. life cycle methods
+1. _useState()_ allows us to use STATE in functional comp
+1. _useEffect()_ helps us render the component whenever we want
+1. _useContext()_ allows us to use context in the functional comp
