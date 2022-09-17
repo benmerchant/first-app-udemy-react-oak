@@ -176,3 +176,5 @@ Lesson 80: HOOKS
 1. _useState()_ allows us to use STATE in functional comp
 1. _useEffect()_ helps us render the component whenever we want
 1. _useContext()_ allows us to use context in the functional comp
+
+Lesson 86: I remain in awe of context.. also. the instructor did a great job of showing how to consume CONTEXTs in different manners
