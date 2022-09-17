@@ -112,3 +112,9 @@ write event handler as an arrow function
 Lesson 67:
 
 render a modal, via PORTALS as a child of another element (besides #root)
+
+## Section 11: React Context API and Hooks
+
+1. Context API: clean & easy way to share states between different components
+1. 1. makes communication between components easier
+1. Hooks: allows us to do a 'whole bunch of stuff' inside functional components, that we cna only do inside class-based components like using staets or lifecycle methods
