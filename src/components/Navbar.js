@@ -1,21 +1,71 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../contexts/ThemeContext';
+import { AuthContext } from '../contexts/AuthContext';
+
+// class Navbar extends React.Component {
+//   render() {
+//     return (
+//       <AuthContext.Consumer>
+//         {(authContext) => {
+//           return (
+//             <ThemeContext.Consumer>
+//               {(themeContext) => {
+//                 const { isDarkTheme, darkTheme, lightTheme } = themeContext;
+//                 const { isLoggedIn, changeAuthStatus } = authContext;
+//                 const theme = isDarkTheme ? darkTheme : lightTheme;
+//                 return (
+//                   <nav
+//                     style={{
+//                       background: theme.background,
+//                       color: theme.text,
+//                       height: '120px',
+//                     }}
+//                   >
+//                     <h2 style={{ textAlign: 'center' }}>
+//                       Benjamin's React Learning Time
+//                     </h2>
+//                     <p
+//                       onClick={changeAuthStatus}
+//                       style={{ textAlign: 'center' }}
+//                     >
+//                       The user is logged {isLoggedIn ? 'in' : 'out'}
+//                     </p>
+//                     <div className='ui three buttons'>
+//                       <button className='ui button'>Books</button>
+//                       <button className='ui button'>TV/Movies</button>
+//                       <button className='ui button'>Musical Artists</button>
+//                     </div>
+//                   </nav>
+//                 );
+//               }}
+//             </ThemeContext.Consumer>
+//           );
+//         }}
+//       </AuthContext.Consumer>
+//     );
+//   }
+// }
 
 const Navbar = () => {
+  const { isDarkTheme, darkTheme, lightTheme } = useContext(ThemeContext);
+  const { isLoggedIn, changeAuthStatus } = useContext(AuthContext);
+  const theme = isDarkTheme ? darkTheme : lightTheme;
   return (
-    <nav className='ui raised very padded segment'>
-      <a className='ui teal inverted segment'>Gloria</a>
-      <div className='ui right floated header'>
-        <button className='ui button'>
-          <Link to='/'>Home</Link>
-        </button>
-        <button className='ui button'>
-          <NavLink to='/about'>About</NavLink>
-        </button>
-        <button className='ui button'>
-          <NavLink to='/contact'>Contact</NavLink>
-        </button>
+    <nav
+      style={{
+        background: theme.background,
+        color: theme.text,
+        height: '120px',
+      }}
+    >
+      <h2 style={{ textAlign: 'center' }}>Benjamin's React Learning Time</h2>
+      <p onClick={changeAuthStatus} style={{ textAlign: 'center' }}>
+        The user is logged {isLoggedIn ? 'in' : 'out'}
+      </p>
+      <div className='ui three buttons'>
+        <button className='ui button'>Books</button>
+        <button className='ui button'>TV/Movies</button>
+        <button className='ui button'>Musical Artists</button>
       </div>
     </nav>
   );

@@ -112,3 +112,69 @@ write event handler as an arrow function
 Lesson 67:
 
 render a modal, via PORTALS as a child of another element (besides #root)
+
+## Section 11: React Context API and Hooks
+
+1. Context API: clean & easy way to share states between different components
+1. 1. makes communication between components easier
+1. 1. a way to 'share state up & down the component tree easily'
+1. 1. using props can get messy
+1. 1. when used with HOOKS can be an alternative to REDUX
+1. 1. no longer need to pass props down the tree
+1. Hooks: allows us to do a 'whole bunch of stuff' inside functional components, that we cna only do inside class-based components like using staets or lifecycle methods
+
+In the context file we are going to _createContext()_ and also create another component that's a class component, and inside have some STATES, and that state will be the data we want to share among different components
+
+Whenever So when we create a context, we have to also create a provider which is basically a tag that surrounds whichever components we want to be able to use that context inside.
+
+```js
+<ThemeContextProvider>
+  <Navbar />
+  <TodoList />
+</ThemeContextProvider>
+```
+
+The children are acceddisble to the Context Provider 'wrapper' as props
+The children are returned as JSX when used as `{this.props.children}`
+This context provider tag provides all the data in the `value={}` attr to its children
+
+# _note_ holy crap, that was actually really COOL ^^^^
+
+React dev tools:
+
+```json
+{
+  "value": {
+    "isDarkTheme": true,
+    "lightTheme": {
+      "text": "#222",
+      "background": "#d8ddf1"
+    },
+    "darkTheme": {
+      "text": "#fff",
+      "background": "#5c5c5c"
+    }
+  },
+  "children": ["<Navbar />", "<TodoList />"]
+}
+```
+
+Lesson 76:
+
+## [Further reading on context](https://reactjs.org/docs/context.html#contextconsumer)
+
+consumer works in both functional and class-based components
+consumer also allows consuming mulitple contexts per component
+
+Lesson 77: it bears repeating. i really like how clean this Context API is... smooth and simple, yet powerful in its functionality
+
+Lesson 80: HOOKS
+
+1. special React functions that allow us to perform some operations in the functional component that were previously only possible in class-based
+1. 1. using state
+1. 1. life cycle methods
+1. _useState()_ allows us to use STATE in functional comp
+1. _useEffect()_ helps us render the component whenever we want
+1. _useContext()_ allows us to use context in the functional comp
+
+Lesson 86: I remain in awe of context.. also. the instructor did a great job of showing how to consume CONTEXTs in different manners

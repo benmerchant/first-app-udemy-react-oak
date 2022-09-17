@@ -1,26 +1,22 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
-import Card from './components/Card';
-// import RouteWrapper from './route-wrapper';
+import TodoList from './components/TodoList';
+import ThemeContextProvider from './contexts/ThemeContext';
+import AuthContextProvider from './contexts/AuthContext';
 
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter>
-        <div className=''>
-          <Navbar />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/:user' element={<Card />} />
-          </Routes>
+      <div className='App'>
+        <div className='ui raised very padded text container segment'>
+          <ThemeContextProvider>
+            <AuthContextProvider>
+              <Navbar />
+              <TodoList />
+            </AuthContextProvider>
+          </ThemeContextProvider>
         </div>
-      </BrowserRouter>
+      </div>
     );
   }
 }
