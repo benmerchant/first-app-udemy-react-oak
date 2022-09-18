@@ -1,23 +1,16 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import TodoList from './components/TodoList';
-import ThemeContextProvider from './contexts/ThemeContext';
-import AuthContextProvider from './contexts/AuthContext';
+import axios from 'axios';
 
 class App extends React.Component {
+  url = 'https://jsonplaceholder.typicode.com/posts/1';
+  constructor() {
+    super();
+    axios.get(this.url).then((res) => {
+      console.log(res.data);
+    });
+  }
   render() {
-    return (
-      <div className='App'>
-        <div className='ui raised very padded text container segment'>
-          <ThemeContextProvider>
-            <AuthContextProvider>
-              <Navbar />
-              <TodoList />
-            </AuthContextProvider>
-          </ThemeContextProvider>
-        </div>
-      </div>
-    );
+    return <div className='App'>Heyooo</div>;
   }
 }
 
